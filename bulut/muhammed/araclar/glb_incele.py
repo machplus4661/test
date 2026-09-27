@@ -71,6 +71,7 @@ def incele(yol: str) -> dict:
                 try:
                     import trimesh
                     tm = trimesh.Trimesh(vertices=pos, faces=idx.reshape(-1, 3), process=False)
+                    tm.merge_vertices()  # UV dikişlerinde çoğaltılmış köşeleri birleştir; yoksa adacıklar parça sayılır
                     parcalar = tm.split(only_watertight=False)
                     boyutlar = sorted([len(p.vertices) for p in parcalar], reverse=True)
                     kayit["parca_sayisi"] = len(parcalar)

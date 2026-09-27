@@ -3,6 +3,31 @@
 Muhammed'i örnek karakter olarak uçtan uca çalışır hale getirmek için kurulan
 iş akışı. Diğer dört karakter aynı düzenden geçirilecek.
 
+**Durum:** Model sıfırdan, prosedürel olarak Blender ile üretildi.
+`cikti/mm-asistan-muhammed.glb` (1.67 MB): her açıdan dokulu, 22 deform kemik,
+6 yüz morph'u, 15 klip. Sayısal rapor `kontrol/muhammed-rapor.md`, görseller
+`kontrol/mm-asistan-muhammed-*.png`. Ayrıntı: `karakter.json`.
+
+## Sıfırdan üretim (Blender)
+
+```
+bash araclar/blender_kur.sh            # Linux: Blender 4.2'yi indirir, BLENDER yolunu yazar
+$BLENDER -b -P araclar/blender_modelle.py -- --cikti cikti/mm-asistan-muhammed.glb
+python araclar/glb_incele.py cikti/mm-asistan-muhammed.glb -o kontrol/muhammed-rapor
+npm install && node araclar/ekran_goruntusu.mjs cikti/mm-asistan-muhammed.glb Idle,Wave on,sag,yuz
+```
+
+Windows'ta Blender 4.2 LTS kurulu olmalı; `blender.exe -b -P araclar\blender_modelle.py -- --cikti cikti\mm-asistan-muhammed.glb`.
+Üretim ~20 sn sürer. Betik `blender_modelle.py` içindeki parametrelerle (ölçüler,
+renkler, klip tanımları) tamamen yeniden üretilebilir; elle düzenlenmiş dosya yoktur.
+
+Betik sırasıyla: metaball gövde → tek ağ, ~12k üçgen → smart UV → numpy ile doku
+(ten, saç, sakal, gözler, kaş, ağız, gömlek, pantolon, ayakkabı) → shape key'ler →
+25 kemik + bone-heat ağırlık → 15 klip (NLA) → GLB (Y-up, JPEG doku).
+
+Ekran görüntüsü betiği: `node araclar/ekran_goruntusu.mjs <glb> <klipler> <açılar> [Morph=değer,...]`.
+Klip %45 noktasında dondurulur. Örnek: `... Talk yuz MouthOpen=1`.
+
 ## Klasörler
 
 | Klasör | İçerik |
@@ -135,12 +160,12 @@ Uygulama (three.js) tarafında yapılacak değişiklikler `web/goruntuleyici.js`
 
 ## Bilinen sınırlar
 
-- Yalnızca `MouthOpen` ve `Smile` var. Yuvarlak ünlüler (o, ö, u, ü) için
-  `MouthPucker` morph'u eklenmeden ağız şekli eksik kalır. Viseme tablosu buna hazır.
-- Yakın plan doğal yüz ifadesi bu ağla kod düzeltmesiyle olmaz; yüzün yeniden
-  düzenlenmesini gerektirir.
-- Betikler `girdi/ornek-rigli.glb` üzerinde denendi. Gerçek dosyada kemik adları
-  farklıysa `glb_incele.py` içindeki `KOL_ANAHTAR` listesi genişletilir.
+- Stilize karakter; fotoğraf benzeri değil. Eller parmaksız.
+- Göz kırpma boyalı gözün dikey sıkışmasıyla yapılır; ayrı göz kapağı yok.
+- Blender'ın seyrek (sparse) morph kaydı three.js'te deriyi bozuyor;
+  `blender_modelle.py` bu yüzden `export_try_sparse_sk=False` kullanır.
+- Eski Hunyuan/UniRig modeli için teşhis ve ağırlık onarım betikleri duruyor
+  (`glb_incele.py`, `agirlik_duzelt.py`); diğer karakterlerde gerekirse kullanılır.
 
 ## Örnek deneme
 

@@ -49,15 +49,37 @@ def _accessor_konum(gltf: GLTF2, idx: int):
     return acc, dtype, n, eleman, stride, basla
 
 
-def accessor_oku(gltf: GLTF2, blob: bytearray, idx: int, ham: bool = False) -> np.ndarray:
-    """Accessor'ı (count, n) şeklinde döndürür. Normalize tam sayılar
-    ham=False iken [0,1] veya [-1,1] float'a çevrilir."""
-    acc, dtype, n, eleman, stride, basla = _accessor_konum(gltf, idx)
-    out = np.empty((acc.count, n), dtype=dtype)
+def _ham_oku(blob, basla, count, n, dtype, stride):
+    eleman = dtype.itemsize * n
+    if stride == eleman:
+        return np.frombuffer(blob, dtype=dtype, count=count * n, offset=basla).reshape(count, n).copy()
+    out = np.empty((count, n), dtype=dtype)
     mv = memoryview(blob)
-    for i in range(acc.count):
+    for i in range(count):
         o = basla + i * stride
         out[i] = np.frombuffer(mv[o : o + eleman], dtype=dtype, count=n)
+    return out
+
+
+def accessor_oku(gltf: GLTF2, blob: bytearray, idx: int, ham: bool = False) -> np.ndarray:
+    """Accessor'ı (count, n) şeklinde döndürür. Normalize tam sayılar
+    ham=False iken [0,1] veya [-1,1] float'a çevrilir. Seyrek (sparse) accessor desteklenir."""
+    acc = gltf.accessors[idx]
+    dtype = np.dtype(BILESEN_TIPI[acc.componentType])
+    n = BILESEN_SAYISI[acc.type]
+    if acc.bufferView is None:
+        out = np.zeros((acc.count, n), dtype=dtype)
+    else:
+        acc, dtype, n, eleman, stride, basla = _accessor_konum(gltf, idx)
+        out = _ham_oku(blob, basla, acc.count, n, dtype, stride)
+    if acc.sparse is not None:
+        sp = acc.sparse
+        ibv = gltf.bufferViews[sp.indices.bufferView]
+        idt = np.dtype(BILESEN_TIPI[sp.indices.componentType])
+        ind = np.frombuffer(blob, dtype=idt, count=sp.count, offset=(ibv.byteOffset or 0) + (sp.indices.byteOffset or 0))
+        vbv = gltf.bufferViews[sp.values.bufferView]
+        val = np.frombuffer(blob, dtype=dtype, count=sp.count * n, offset=(vbv.byteOffset or 0) + (sp.values.byteOffset or 0)).reshape(sp.count, n)
+        out[ind] = val
     if ham or not acc.normalized:
         return out
     if dtype.kind == "u":

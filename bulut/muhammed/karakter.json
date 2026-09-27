@@ -1,43 +1,67 @@
 {
   "ad": "muhammed",
   "goruntu_adi": "Muhammed",
-  "surum": "0.1.0",
-  "durum": "kurulum",
+  "surum": "1.0.0",
+  "durum": "sifirdan_uretildi",
+  "uretim": {
+    "yontem": "prosedürel, Blender 4.2 headless (araclar/blender_modelle.py)",
+    "stil": "stilize, her açıdan dokulu",
+    "komut": "blender -b -P araclar/blender_modelle.py -- --cikti cikti/mm-asistan-muhammed.glb",
+    "sure_sn": 20
+  },
   "dosyalar": {
     "uygulama_glb": "cikti/mm-asistan-muhammed.glb",
-    "girdi_glb": "girdi/mm-asistan-muhammed.glb",
-    "rigli_ham": "girdi/muhammed-2-rigged.glb",
-    "rigsiz_ham": "girdi/muhammed-2.glb",
-    "yerel_kaynak": {
-      "uygulama": "C:\\MakeMaker\\01-proje\\public\\models\\mm-asistan-muhammed.glb",
-      "ham": "C:\\MakeMaker\\09-cizim\\3d-orijinal\\mm-asistan-muhammed.glb",
-      "rigli": "C:\\MakeMaker\\09-cizim\\tamboy\\muhammed-2-rigged.glb",
-      "rigsiz": "C:\\MakeMaker\\09-cizim\\tamboy\\muhammed-2.glb"
-    }
+    "doku_png": "cikti/mm-asistan-muhammed-doku.png",
+    "eski_girdi_glb": "girdi/mm-asistan-muhammed.glb",
+    "yerel_hedef": "C:\\MakeMaker\\01-proje\\public\\models\\mm-asistan-muhammed.glb"
   },
-  "hedef": {
-    "boyut_mb_maks": 5,
-    "kemik_sayisi_beklenen": 29,
-    "morph_zorunlu": ["MouthOpen", "Smile"],
-    "morph_onerilen": ["MouthPucker", "BlinkL", "BlinkR", "BrowUp"],
-    "klip_sayisi": 15,
-    "boy_metre": 1.75,
-    "ayak_zemin_y": 0.0,
-    "on_yon": "+Z"
+  "olculer": {
+    "boy_metre": 1.74,
+    "ucgen": 12216,
+    "kose": 6110,
+    "boyut_mb": 1.67,
+    "kemik_deform": 22,
+    "kemik_toplam": 25,
+    "doku": "2048x2048 JPEG (GLB içinde)",
+    "on_yon": "+Z",
+    "ayak_zemin_y": 0.0
+  },
+  "kemikler": ["Hips", "Spine", "Spine1", "Spine2", "Neck", "Head",
+               "ShoulderL", "ArmL", "ForeArmL", "HandL", "UpLegL", "LegL", "FootL", "ToeL",
+               "ShoulderR", "ArmR", "ForeArmR", "HandR", "UpLegR", "LegR", "FootR", "ToeR",
+               "Jaw (deform değil)", "EyeL (deform değil)", "EyeR (deform değil)"],
+  "morphlar": ["MouthOpen", "Smile", "MouthPucker", "BlinkL", "BlinkR", "BrowUp"],
+  "klipler": ["Gulumse", "Idle", "IdleBakin", "IdleCeket", "IdleSaat", "Jump", "KafaVurma", "Sasir",
+              "Talk", "Tikla", "Uyari", "Walking", "Wave", "Yaslan", "Yes"],
+  "renkler": {
+    "gomlek": "petrol yeşili", "pantolon": "bej", "ayakkabi": "kahverengi", "sac": "koyu kahve, kısa", "sakal": "kısa"
   },
   "kabul_olcutleri": {
     "kol_kemiginden_uzak_kose": 0,
     "normalize_disi_kose": 0,
-    "kopuk_kucuk_parca_maks": 5,
+    "kopuk_parca": 1,
     "uv_kapsama_min": 0.35,
     "her_klip_her_acidan_gozle_onay": true
   },
+  "kabul_sonucu": {
+    "kol_kemiginden_uzak_kose": 0,
+    "normalize_disi_kose": 0,
+    "kopuk_parca": 1,
+    "uv_kapsama": 0.76,
+    "gozle_onay": "kontrol/mm-asistan-muhammed-*.png; nihai onay yerelde kullanıcıda"
+  },
   "asamalar": [
-    {"no": 1, "ad": "teşhis", "arac": "araclar/glb_incele.py", "cikti": "kontrol/muhammed-rapor.md", "durum": "bekliyor"},
-    {"no": 2, "ad": "ağırlık onarımı", "arac": "araclar/agirlik_duzelt.py", "cikti": "cikti/mm-asistan-muhammed.glb", "durum": "bekliyor"},
-    {"no": 3, "ad": "klip doğrulama", "arac": "web/index.html", "cikti": "kontrol/*.png", "durum": "bekliyor"},
-    {"no": 4, "ad": "dudak senkronu", "arac": "araclar/lipsync_uret.py", "cikti": "ses/zaman/*.json", "durum": "bekliyor"},
-    {"no": 5, "ad": "doku tamamlama", "arac": "yerelde: yan/arka referans görsel + üretim betiği", "cikti": "cikti/mm-asistan-muhammed.glb", "durum": "bekliyor"},
+    {"no": 1, "ad": "teşhis (eski model)", "arac": "araclar/glb_incele.py", "durum": "atlandı: model sıfırdan üretildi"},
+    {"no": 2, "ad": "sıfırdan modelleme", "arac": "araclar/blender_modelle.py", "cikti": "cikti/mm-asistan-muhammed.glb", "durum": "tamam"},
+    {"no": 3, "ad": "sayısal doğrulama", "arac": "araclar/glb_incele.py", "cikti": "kontrol/muhammed-rapor.md", "durum": "tamam, uyarı yok"},
+    {"no": 4, "ad": "görsel doğrulama", "arac": "araclar/ekran_goruntusu.mjs", "cikti": "kontrol/mm-asistan-muhammed-*.png", "durum": "tamam (bulutta); yerelde bakılacak"},
+    {"no": 5, "ad": "dudak senkronu", "arac": "araclar/lipsync_uret.py", "cikti": "ses/zaman/*.json", "durum": "hazır, gerçek ses kaydı bekliyor"},
     {"no": 6, "ad": "uygulamaya alma", "arac": "yerelde kopyalama", "cikti": "01-proje/public/models/", "durum": "bekliyor"}
+  ],
+  "bilinen_sinirlar": [
+    "Stilize karakter; fotoğraf benzeri değil.",
+    "Eller parmaksız (eldiven biçimi).",
+    "Göz kırpma, boyalı gözün dikey sıkışmasıyla yapılır; ayrı göz kapağı geometrisi yok.",
+    "Blender seyrek (sparse) morph kaydı three.js'te deriyi bozuyor; dışa aktarımda kapalı tutulmalı (export_try_sparse_sk=False)."
   ]
 }

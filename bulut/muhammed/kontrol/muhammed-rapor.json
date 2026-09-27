@@ -1,0 +1,834 @@
+{
+  "dosya": "mm-asistan-muhammed.glb",
+  "boyut_mb": 1.67,
+  "agler": [
+    {
+      "mesh": 0,
+      "primitive": 0,
+      "ad": "Muhammed",
+      "kose": 7897,
+      "bbox_min": [
+        -0.2985999882221222,
+        0.0,
+        -0.12189999967813492
+      ],
+      "bbox_max": [
+        0.2985999882221222,
+        1.7384999990463257,
+        0.13760000467300415
+      ],
+      "uv": true,
+      "deri": true,
+      "morph_sayisi": 6,
+      "ucgen": 12216,
+      "parca_sayisi": 1,
+      "parca_koseleri": [
+        6110
+      ],
+      "uv_min": [
+        0.0020000000949949026,
+        0.009999999776482582
+      ],
+      "uv_max": [
+        0.9980000257492065,
+        0.9980000257492065
+      ],
+      "uv_kapsama_orani": 0.661,
+      "morph_adlari": [
+        "MouthOpen",
+        "Smile",
+        "MouthPucker",
+        "BlinkL",
+        "BlinkR",
+        "BrowUp"
+      ],
+      "morph_etkileri": [
+        {
+          "etkilenen_kose": 62,
+          "en_buyuk_kayma": 0.0199,
+          "merkez": [
+            0.0,
+            -0.004999999888241291,
+            -0.0010000000474974513
+          ]
+        },
+        {
+          "etkilenen_kose": 71,
+          "en_buyuk_kayma": 0.0106,
+          "merkez": [
+            0.0,
+            0.0020000000949949026,
+            0.0
+          ]
+        },
+        {
+          "etkilenen_kose": 80,
+          "en_buyuk_kayma": 0.0097,
+          "merkez": [
+            -0.0,
+            0.0,
+            0.0020000000949949026
+          ]
+        },
+        {
+          "etkilenen_kose": 34,
+          "en_buyuk_kayma": 0.005,
+          "merkez": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "etkilenen_kose": 24,
+          "en_buyuk_kayma": 0.005,
+          "merkez": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "etkilenen_kose": 81,
+          "en_buyuk_kayma": 0.0065,
+          "merkez": [
+            0.0,
+            0.0020000000949949026,
+            0.0
+          ]
+        }
+      ]
+    }
+  ],
+  "iskelet": {
+    "kemik_sayisi": 22,
+    "kemikler": [
+      {
+        "ad": "Hips",
+        "ebeveyn": null,
+        "sinif": "govde",
+        "konum": [
+          0.0,
+          0.95,
+          0.0
+        ]
+      },
+      {
+        "ad": "Spine",
+        "ebeveyn": "Hips",
+        "sinif": "govde",
+        "konum": [
+          0.0,
+          1.06,
+          0.0
+        ]
+      },
+      {
+        "ad": "Spine1",
+        "ebeveyn": "Spine",
+        "sinif": "govde",
+        "konum": [
+          0.0,
+          1.2,
+          0.0
+        ]
+      },
+      {
+        "ad": "Spine2",
+        "ebeveyn": "Spine1",
+        "sinif": "govde",
+        "konum": [
+          0.0,
+          1.34,
+          0.0
+        ]
+      },
+      {
+        "ad": "Neck",
+        "ebeveyn": "Spine2",
+        "sinif": "bas",
+        "konum": [
+          0.0,
+          1.455,
+          -0.005
+        ]
+      },
+      {
+        "ad": "Head",
+        "ebeveyn": "Neck",
+        "sinif": "bas",
+        "konum": [
+          0.0,
+          1.525,
+          -0.005
+        ]
+      },
+      {
+        "ad": "ShoulderL",
+        "ebeveyn": "Spine2",
+        "sinif": "kol",
+        "konum": [
+          0.03,
+          1.43,
+          0.0
+        ]
+      },
+      {
+        "ad": "ArmL",
+        "ebeveyn": "ShoulderL",
+        "sinif": "kol",
+        "konum": [
+          0.205,
+          1.425,
+          0.0
+        ]
+      },
+      {
+        "ad": "ForeArmL",
+        "ebeveyn": "ArmL",
+        "sinif": "kol",
+        "konum": [
+          0.245,
+          1.17,
+          -0.01
+        ]
+      },
+      {
+        "ad": "HandL",
+        "ebeveyn": "ForeArmL",
+        "sinif": "kol",
+        "konum": [
+          0.262,
+          0.93,
+          0.0
+        ]
+      },
+      {
+        "ad": "ShoulderR",
+        "ebeveyn": "Spine2",
+        "sinif": "kol",
+        "konum": [
+          -0.03,
+          1.43,
+          0.0
+        ]
+      },
+      {
+        "ad": "ArmR",
+        "ebeveyn": "ShoulderR",
+        "sinif": "kol",
+        "konum": [
+          -0.205,
+          1.425,
+          0.0
+        ]
+      },
+      {
+        "ad": "ForeArmR",
+        "ebeveyn": "ArmR",
+        "sinif": "kol",
+        "konum": [
+          -0.245,
+          1.17,
+          -0.01
+        ]
+      },
+      {
+        "ad": "HandR",
+        "ebeveyn": "ForeArmR",
+        "sinif": "kol",
+        "konum": [
+          -0.262,
+          0.93,
+          0.0
+        ]
+      },
+      {
+        "ad": "UpLegL",
+        "ebeveyn": "Hips",
+        "sinif": "bacak",
+        "konum": [
+          0.095,
+          0.9,
+          0.0
+        ]
+      },
+      {
+        "ad": "LegL",
+        "ebeveyn": "UpLegL",
+        "sinif": "bacak",
+        "konum": [
+          0.095,
+          0.49,
+          0.0
+        ]
+      },
+      {
+        "ad": "FootL",
+        "ebeveyn": "LegL",
+        "sinif": "bacak",
+        "konum": [
+          0.095,
+          0.1,
+          0.0
+        ]
+      },
+      {
+        "ad": "ToeL",
+        "ebeveyn": "FootL",
+        "sinif": "kol",
+        "konum": [
+          0.095,
+          0.03,
+          0.09
+        ]
+      },
+      {
+        "ad": "UpLegR",
+        "ebeveyn": "Hips",
+        "sinif": "bacak",
+        "konum": [
+          -0.095,
+          0.9,
+          0.0
+        ]
+      },
+      {
+        "ad": "LegR",
+        "ebeveyn": "UpLegR",
+        "sinif": "bacak",
+        "konum": [
+          -0.095,
+          0.49,
+          0.0
+        ]
+      },
+      {
+        "ad": "FootR",
+        "ebeveyn": "LegR",
+        "sinif": "bacak",
+        "konum": [
+          -0.095,
+          0.1,
+          0.0
+        ]
+      },
+      {
+        "ad": "ToeR",
+        "ebeveyn": "FootR",
+        "sinif": "govde",
+        "konum": [
+          -0.095,
+          0.03,
+          0.09
+        ]
+      }
+    ]
+  },
+  "agirliklar": [
+    {
+      "mesh": "Muhammed",
+      "normalize_disi_kose": 0,
+      "sifir_agirlikli_kose": 0,
+      "ort_etki_sayisi": 2.36,
+      "kemik_basina_kose": {
+        "Hips": 421.9,
+        "Spine": 615.1,
+        "Spine1": 535.4,
+        "Spine2": 104.1,
+        "Neck": 100.0,
+        "Head": 913.1,
+        "ShoulderL": 291.1,
+        "ArmL": 445.3,
+        "ForeArmL": 312.1,
+        "HandL": 153.2,
+        "ShoulderR": 294.4,
+        "ArmR": 440.3,
+        "ForeArmR": 368.5,
+        "HandR": 158.6,
+        "UpLegL": 654.6,
+        "LegL": 425.3,
+        "FootL": 220.1,
+        "ToeL": 62.0,
+        "UpLegR": 659.9,
+        "LegR": 440.5,
+        "FootR": 220.8,
+        "ToeR": 60.7
+      },
+      "kol_kemigi_uzak_kose": 0
+    }
+  ],
+  "animasyonlar": [
+    {
+      "ad": "Idle",
+      "sure_sn": 4.0,
+      "kanal": 66,
+      "hedef_dugum": [
+        "ArmL",
+        "ArmR",
+        "FootL",
+        "FootR",
+        "ForeArmL",
+        "ForeArmR",
+        "HandL",
+        "HandR",
+        "Head",
+        "Hips",
+        "LegL",
+        "LegR",
+        "Neck",
+        "ShoulderL",
+        "ShoulderR",
+        "Spine",
+        "Spine1",
+        "Spine2",
+        "ToeL",
+        "ToeR",
+        "UpLegL",
+        "UpLegR"
+      ],
+      "morph_kanali": false
+    },
+    {
+      "ad": "IdleBakin",
+      "sure_sn": 3.5,
+      "kanal": 66,
+      "hedef_dugum": [
+        "ArmL",
+        "ArmR",
+        "FootL",
+        "FootR",
+        "ForeArmL",
+        "ForeArmR",
+        "HandL",
+        "HandR",
+        "Head",
+        "Hips",
+        "LegL",
+        "LegR",
+        "Neck",
+        "ShoulderL",
+        "ShoulderR",
+        "Spine",
+        "Spine1",
+        "Spine2",
+        "ToeL",
+        "ToeR",
+        "UpLegL",
+        "UpLegR"
+      ],
+      "morph_kanali": false
+    },
+    {
+      "ad": "IdleCeket",
+      "sure_sn": 3.0,
+      "kanal": 66,
+      "hedef_dugum": [
+        "ArmL",
+        "ArmR",
+        "FootL",
+        "FootR",
+        "ForeArmL",
+        "ForeArmR",
+        "HandL",
+        "HandR",
+        "Head",
+        "Hips",
+        "LegL",
+        "LegR",
+        "Neck",
+        "ShoulderL",
+        "ShoulderR",
+        "Spine",
+        "Spine1",
+        "Spine2",
+        "ToeL",
+        "ToeR",
+        "UpLegL",
+        "UpLegR"
+      ],
+      "morph_kanali": false
+    },
+    {
+      "ad": "IdleSaat",
+      "sure_sn": 3.0,
+      "kanal": 66,
+      "hedef_dugum": [
+        "ArmL",
+        "ArmR",
+        "FootL",
+        "FootR",
+        "ForeArmL",
+        "ForeArmR",
+        "HandL",
+        "HandR",
+        "Head",
+        "Hips",
+        "LegL",
+        "LegR",
+        "Neck",
+        "ShoulderL",
+        "ShoulderR",
+        "Spine",
+        "Spine1",
+        "Spine2",
+        "ToeL",
+        "ToeR",
+        "UpLegL",
+        "UpLegR"
+      ],
+      "morph_kanali": false
+    },
+    {
+      "ad": "Gulumse",
+      "sure_sn": 2.0,
+      "kanal": 66,
+      "hedef_dugum": [
+        "ArmL",
+        "ArmR",
+        "FootL",
+        "FootR",
+        "ForeArmL",
+        "ForeArmR",
+        "HandL",
+        "HandR",
+        "Head",
+        "Hips",
+        "LegL",
+        "LegR",
+        "Neck",
+        "ShoulderL",
+        "ShoulderR",
+        "Spine",
+        "Spine1",
+        "Spine2",
+        "ToeL",
+        "ToeR",
+        "UpLegL",
+        "UpLegR"
+      ],
+      "morph_kanali": false
+    },
+    {
+      "ad": "Jump",
+      "sure_sn": 1.3,
+      "kanal": 66,
+      "hedef_dugum": [
+        "ArmL",
+        "ArmR",
+        "FootL",
+        "FootR",
+        "ForeArmL",
+        "ForeArmR",
+        "HandL",
+        "HandR",
+        "Head",
+        "Hips",
+        "LegL",
+        "LegR",
+        "Neck",
+        "ShoulderL",
+        "ShoulderR",
+        "Spine",
+        "Spine1",
+        "Spine2",
+        "ToeL",
+        "ToeR",
+        "UpLegL",
+        "UpLegR"
+      ],
+      "morph_kanali": false
+    },
+    {
+      "ad": "KafaVurma",
+      "sure_sn": 1.2,
+      "kanal": 66,
+      "hedef_dugum": [
+        "ArmL",
+        "ArmR",
+        "FootL",
+        "FootR",
+        "ForeArmL",
+        "ForeArmR",
+        "HandL",
+        "HandR",
+        "Head",
+        "Hips",
+        "LegL",
+        "LegR",
+        "Neck",
+        "ShoulderL",
+        "ShoulderR",
+        "Spine",
+        "Spine1",
+        "Spine2",
+        "ToeL",
+        "ToeR",
+        "UpLegL",
+        "UpLegR"
+      ],
+      "morph_kanali": false
+    },
+    {
+      "ad": "Sasir",
+      "sure_sn": 1.6,
+      "kanal": 66,
+      "hedef_dugum": [
+        "ArmL",
+        "ArmR",
+        "FootL",
+        "FootR",
+        "ForeArmL",
+        "ForeArmR",
+        "HandL",
+        "HandR",
+        "Head",
+        "Hips",
+        "LegL",
+        "LegR",
+        "Neck",
+        "ShoulderL",
+        "ShoulderR",
+        "Spine",
+        "Spine1",
+        "Spine2",
+        "ToeL",
+        "ToeR",
+        "UpLegL",
+        "UpLegR"
+      ],
+      "morph_kanali": false
+    },
+    {
+      "ad": "Talk",
+      "sure_sn": 3.0,
+      "kanal": 66,
+      "hedef_dugum": [
+        "ArmL",
+        "ArmR",
+        "FootL",
+        "FootR",
+        "ForeArmL",
+        "ForeArmR",
+        "HandL",
+        "HandR",
+        "Head",
+        "Hips",
+        "LegL",
+        "LegR",
+        "Neck",
+        "ShoulderL",
+        "ShoulderR",
+        "Spine",
+        "Spine1",
+        "Spine2",
+        "ToeL",
+        "ToeR",
+        "UpLegL",
+        "UpLegR"
+      ],
+      "morph_kanali": false
+    },
+    {
+      "ad": "Tikla",
+      "sure_sn": 1.5,
+      "kanal": 66,
+      "hedef_dugum": [
+        "ArmL",
+        "ArmR",
+        "FootL",
+        "FootR",
+        "ForeArmL",
+        "ForeArmR",
+        "HandL",
+        "HandR",
+        "Head",
+        "Hips",
+        "LegL",
+        "LegR",
+        "Neck",
+        "ShoulderL",
+        "ShoulderR",
+        "Spine",
+        "Spine1",
+        "Spine2",
+        "ToeL",
+        "ToeR",
+        "UpLegL",
+        "UpLegR"
+      ],
+      "morph_kanali": false
+    },
+    {
+      "ad": "Uyari",
+      "sure_sn": 1.6,
+      "kanal": 66,
+      "hedef_dugum": [
+        "ArmL",
+        "ArmR",
+        "FootL",
+        "FootR",
+        "ForeArmL",
+        "ForeArmR",
+        "HandL",
+        "HandR",
+        "Head",
+        "Hips",
+        "LegL",
+        "LegR",
+        "Neck",
+        "ShoulderL",
+        "ShoulderR",
+        "Spine",
+        "Spine1",
+        "Spine2",
+        "ToeL",
+        "ToeR",
+        "UpLegL",
+        "UpLegR"
+      ],
+      "morph_kanali": false
+    },
+    {
+      "ad": "Walking",
+      "sure_sn": 1.1,
+      "kanal": 66,
+      "hedef_dugum": [
+        "ArmL",
+        "ArmR",
+        "FootL",
+        "FootR",
+        "ForeArmL",
+        "ForeArmR",
+        "HandL",
+        "HandR",
+        "Head",
+        "Hips",
+        "LegL",
+        "LegR",
+        "Neck",
+        "ShoulderL",
+        "ShoulderR",
+        "Spine",
+        "Spine1",
+        "Spine2",
+        "ToeL",
+        "ToeR",
+        "UpLegL",
+        "UpLegR"
+      ],
+      "morph_kanali": false
+    },
+    {
+      "ad": "Wave",
+      "sure_sn": 2.2,
+      "kanal": 66,
+      "hedef_dugum": [
+        "ArmL",
+        "ArmR",
+        "FootL",
+        "FootR",
+        "ForeArmL",
+        "ForeArmR",
+        "HandL",
+        "HandR",
+        "Head",
+        "Hips",
+        "LegL",
+        "LegR",
+        "Neck",
+        "ShoulderL",
+        "ShoulderR",
+        "Spine",
+        "Spine1",
+        "Spine2",
+        "ToeL",
+        "ToeR",
+        "UpLegL",
+        "UpLegR"
+      ],
+      "morph_kanali": false
+    },
+    {
+      "ad": "Yaslan",
+      "sure_sn": 3.0,
+      "kanal": 66,
+      "hedef_dugum": [
+        "ArmL",
+        "ArmR",
+        "FootL",
+        "FootR",
+        "ForeArmL",
+        "ForeArmR",
+        "HandL",
+        "HandR",
+        "Head",
+        "Hips",
+        "LegL",
+        "LegR",
+        "Neck",
+        "ShoulderL",
+        "ShoulderR",
+        "Spine",
+        "Spine1",
+        "Spine2",
+        "ToeL",
+        "ToeR",
+        "UpLegL",
+        "UpLegR"
+      ],
+      "morph_kanali": false
+    },
+    {
+      "ad": "Yes",
+      "sure_sn": 1.2,
+      "kanal": 66,
+      "hedef_dugum": [
+        "ArmL",
+        "ArmR",
+        "FootL",
+        "FootR",
+        "ForeArmL",
+        "ForeArmR",
+        "HandL",
+        "HandR",
+        "Head",
+        "Hips",
+        "LegL",
+        "LegR",
+        "Neck",
+        "ShoulderL",
+        "ShoulderR",
+        "Spine",
+        "Spine1",
+        "Spine2",
+        "ToeL",
+        "ToeR",
+        "UpLegL",
+        "UpLegR"
+      ],
+      "morph_kanali": false
+    }
+  ],
+  "dokular": [
+    {
+      "indeks": 0,
+      "ad": "mm-asistan-muhammed-doku",
+      "mime": "image/jpeg",
+      "boyut_kb": 278.5,
+      "cozunurluk": [
+        2048,
+        2048
+      ],
+      "gri_alan_orani": 0.013
+    }
+  ],
+  "malzemeler": [
+    {
+      "ad": "MuhammedMat",
+      "baseColor": true,
+      "normal": false
+    }
+  ],
+  "uyarilar": []
+}

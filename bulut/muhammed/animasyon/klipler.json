@@ -1,5 +1,5 @@
 {
-  "_not": "GLB'deki gerçek klipler (15): Gulumse, Idle, IdleBakin, IdleCeket, IdleSaat, Jump, KafaVurma, Sasir, Talk, Tikla, Uyari, Walking, Wave, Yaslan, Yes. 'glb_adi' bu adlara eşlendi; birebir karşılığı olmayanlar (hayir→KafaVurma, alkis→Jump, uzgun→Yaslan, veda→Wave) en yakın klibe bağlandı, gözle kontrol sonrası değişebilir. IdleCeket ve Walking tanımda yok, görüntüleyici yine de listeler.",
+  "_not": "GLB'deki klipler (15, prosedürel üretim): Gulumse, Idle, IdleBakin, IdleCeket, IdleSaat, Jump, KafaVurma, Sasir, Talk, Tikla, Uyari, Walking, Wave, Yaslan, Yes. 'glb_adi' eşlemesi: birebir karşılığı olmayanlar en yakın klibe bağlı (hayir→KafaVurma, alkis→Jump, uzgun→Yaslan, veda→Wave, onay→Uyari). Klip hareketleri araclar/blender_modelle.py → klip_tanimlari().",
   "varsayilan_gecis_sn": 0.35,
   "bosta_klip": "bekleme",
   "klipler": [

@@ -72,6 +72,7 @@ async function modelYukle(kaynak) {
   $('#iskelet').onchange();
   $('#tel').onchange();
   durum(`${gltf.animations.length} klip, ${Object.keys(morphHedef).length} morph, ${sayKemik(gltf)} kemik`);
+  window.__dbg = { kok, mixer, klipler, aktif: () => aktifAksiyon, morphAyarla, klipOynat, renderer, scene, camera };
 }
 
 function sayKemik(gltf) { const s = new Set(); gltf.scene.traverse((o) => { if (o.isBone) s.add(o); }); return s.size; }
@@ -104,7 +105,7 @@ function klipOynat(ad, tanim) {
   a.reset(); a.timeScale = parseFloat($('#hiz').value);
   a.setLoop(tanim && tanim.dongu === false ? THREE.LoopOnce : THREE.LoopRepeat, Infinity);
   a.clampWhenFinished = true; a.enabled = true;
-  if (aktifAksiyon && aktifAksiyon !== a) { a.crossFadeFrom(aktifAksiyon, gecis, true); }
+  if (aktifAksiyon && aktifAksiyon !== a) { a.crossFadeFrom(aktifAksiyon, gecis, false); }
   a.play(); aktifAksiyon = a;
   document.querySelectorAll('#klipler button').forEach((b) => b.classList.toggle('aktif', b.textContent === (tanim ? tanim.ad : ad)));
   // yüz katmanı

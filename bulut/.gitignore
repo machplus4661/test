@@ -1,3 +1,6 @@
 __pycache__/
 *.pyc
 .kuruldu
+node_modules/
+package-lock.json
+cikti/*-doku.png
