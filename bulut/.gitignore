@@ -3,4 +3,4 @@ __pycache__/
 .kuruldu
 node_modules/
 package-lock.json
-cikti/*-doku.png
+**/cikti/*-doku.png
