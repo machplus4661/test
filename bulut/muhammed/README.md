@@ -26,6 +26,16 @@ cd bulut/muhammed
 pip install -r requirements.txt
 ```
 
+Kısayol: `powershell -ExecutionPolicy Bypass -File .\kur.ps1` hem kurulumu hem
+sunucuyu hem tarayıcı açılışını tek seferde yapar. Depo yoksa önce klonlayın:
+
+```
+cd C:\MakeMaker
+git clone -b claude/suan-hediye-limiti-kkrj2d https://github.com/machplus4661/test.git bulut-test
+cd bulut-test\bulut\muhammed
+powershell -ExecutionPolicy Bypass -File .\kur.ps1
+```
+
 ## Aşamalar
 
 ### 1. Girdi dosyalarını koy
