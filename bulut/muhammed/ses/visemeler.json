@@ -1,0 +1,31 @@
+{
+  "_not": "Türkçe harf → viseme → morph ağırlığı. Şimdilik yalnızca MouthOpen ve Smile var; MouthPucker eklenince 'oo' ve 'uu' satırları güncellenecek.",
+  "harf_viseme": {
+    "a": "aa", "â": "aa",
+    "e": "ee",
+    "ı": "ii", "i": "ii", "î": "ii",
+    "o": "oo", "ö": "oo",
+    "u": "uu", "ü": "uu", "û": "uu",
+    "p": "pp", "b": "pp", "m": "pp",
+    "f": "ff", "v": "ff",
+    "s": "ss", "z": "ss", "ş": "ss", "c": "ss", "ç": "ss", "j": "ss",
+    "d": "dd", "t": "dd", "n": "dd", "l": "dd", "r": "dd",
+    "k": "kk", "g": "kk", "ğ": "kk", "h": "kk", "y": "kk", "q": "kk", "w": "ff", "x": "ss"
+  },
+  "viseme_morph": {
+    "sil": {"MouthOpen": 0.0,  "Smile": 0.0,  "MouthPucker": 0.0},
+    "aa":  {"MouthOpen": 1.0,  "Smile": 0.0,  "MouthPucker": 0.0},
+    "ee":  {"MouthOpen": 0.55, "Smile": 0.5,  "MouthPucker": 0.0},
+    "ii":  {"MouthOpen": 0.25, "Smile": 0.75, "MouthPucker": 0.0},
+    "oo":  {"MouthOpen": 0.7,  "Smile": 0.0,  "MouthPucker": 0.8},
+    "uu":  {"MouthOpen": 0.4,  "Smile": 0.0,  "MouthPucker": 1.0},
+    "pp":  {"MouthOpen": 0.0,  "Smile": 0.1,  "MouthPucker": 0.0},
+    "ff":  {"MouthOpen": 0.15, "Smile": 0.2,  "MouthPucker": 0.0},
+    "ss":  {"MouthOpen": 0.2,  "Smile": 0.35, "MouthPucker": 0.0},
+    "dd":  {"MouthOpen": 0.3,  "Smile": 0.15, "MouthPucker": 0.0},
+    "kk":  {"MouthOpen": 0.35, "Smile": 0.1,  "MouthPucker": 0.0}
+  },
+  "sure_agirligi": {"unlu": 1.0, "unsuz": 0.55, "bosluk": 0.35, "noktalama": 1.2},
+  "yumusatma_sn": 0.06,
+  "cene_kemigi": {"aday_adlar": ["Jaw", "jaw", "cene", "Cene", "mixamorig:Jaw"], "aciklama": "Varsa MouthOpen'a ek olarak X ekseninde en çok 12° döndürülür.", "maks_derece": 12}
+}

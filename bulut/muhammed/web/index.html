@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Muhammed Test</title>
+<style>
+  :root { --bg:#f4f5f7; --panel:#fff; --fg:#1b1f24; --muted:#6b7280; --line:#e2e5ea; --acc:#2563eb; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg:#0f1115; --panel:#181b21; --fg:#e6e8ec; --muted:#9aa3b2; --line:#2a2f38; --acc:#5b8cff; } }
+  :root[data-theme="dark"] { --bg:#0f1115; --panel:#181b21; --fg:#e6e8ec; --muted:#9aa3b2; --line:#2a2f38; --acc:#5b8cff; }
+  * { box-sizing:border-box }
+  body { margin:0; background:var(--bg); color:var(--fg); font:14px/1.4 system-ui, sans-serif; display:grid; grid-template-columns: 300px 1fr; height:100vh; }
+  aside { background:var(--panel); border-right:1px solid var(--line); padding:12px 16px; overflow:auto; }
+  main { position:relative }
+  canvas { display:block; width:100%; height:100% }
+  h1 { font-size:16px; margin:0 0 6px }
+  h2 { font-size:12px; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); margin:16px 0 6px }
+  button { background:var(--panel); color:var(--fg); border:1px solid var(--line); border-radius:6px; padding:5px 9px; margin:2px 2px 2px 0; cursor:pointer; font:inherit }
+  button.aktif, button:hover { border-color:var(--acc); color:var(--acc) }
+  label { display:flex; align-items:center; gap:8px; margin:4px 0; font-size:13px }
+  input[type=range] { flex:1 }
+  .kucuk { color:var(--muted); font-size:12px }
+  #durum { position:absolute; left:12px; bottom:10px; background:var(--panel); border:1px solid var(--line); border-radius:6px; padding:6px 10px; font-size:12px; max-width:70% }
+  #uyari { color:#c2410c }
+  @media (max-width:720px) { body { grid-template-columns:1fr; grid-template-rows:auto 1fr } aside { border-right:0; border-bottom:1px solid var(--line); max-height:45vh } }
+</style>
+</head>
+<body>
+<aside>
+  <h1>Muhammed test</h1>
+  <div class="kucuk" id="dosya">yükleniyor…</div>
+  <div id="uyari"></div>
+
+  <h2>Model</h2>
+  <label><input type="file" id="glbSec" accept=".glb"> </label>
+  <div class="kucuk">Varsayılan: <code>?glb=../cikti/mm-asistan-muhammed.glb</code>. Bulunamazsa girdi klasörüne bakar.</div>
+
+  <h2>Klipler</h2>
+  <div id="klipler"></div>
+  <label>Geçiş <input type="range" id="gecis" min="0" max="1" step="0.05" value="0.35"> <span id="gecisV">0.35</span>s</label>
+  <label>Hız <input type="range" id="hiz" min="0" max="2" step="0.1" value="1"> <span id="hizV">1.0</span>×</label>
+
+  <h2>Yüz (morph)</h2>
+  <div id="morphlar" class="kucuk">morph yok</div>
+
+  <h2>Konuşma</h2>
+  <div id="replikler"></div>
+  <label><input type="checkbox" id="sesTabanli"> Ses dosyası yoksa metinden zamanla</label>
+  <label>Ağız kazancı <input type="range" id="kazanc" min="0" max="2" step="0.1" value="1"> <span id="kazancV">1.0</span></label>
+
+  <h2>Görünüm</h2>
+  <div>
+    <button data-aci="on">Ön</button><button data-aci="sag">Sağ</button><button data-aci="arka">Arka</button><button data-aci="sol">Sol</button><button data-aci="yuz">Yüz</button>
+  </div>
+  <label><input type="checkbox" id="dondur"> Kendi etrafında döndür</label>
+  <label><input type="checkbox" id="iskelet"> İskeleti göster</label>
+  <label><input type="checkbox" id="tel"> Tel kafes</label>
+  <label><input type="checkbox" id="zemin" checked> Zemin ızgarası</label>
+  <button id="ekran">Ekran görüntüsü kaydet</button>
+  <div class="kucuk">PNG'yi <code>kontrol/</code> klasörüne koyun.</div>
+</aside>
+<main>
+  <canvas id="c"></canvas>
+  <div id="durum">hazır</div>
+</main>
+
+<script type="importmap">
+{ "imports": {
+  "three": "https://cdn.jsdelivr.net/npm/three@0.186.1/build/three.module.js",
+  "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.186.1/examples/jsm/"
+} }
+</script>
+<script type="module" src="./goruntuleyici.js"></script>
+</body>
+</html>

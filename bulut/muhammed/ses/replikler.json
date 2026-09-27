@@ -1,0 +1,10 @@
+{
+  "_not": "Her replik: metin, ses dosyası (ses/kayit/ altında), üretilen zaman çizelgesi (ses/zaman/ altında), üstüne binecek vücut klibi. Ses dosyası yoksa lipsync_uret.py --sure ile tahmini süre kullanır.",
+  "karakter": "muhammed",
+  "replikler": [
+    {"id": "selam-01", "metin": "Merhaba, ben Muhammed. Size nasıl yardımcı olabilirim?", "ses": "ses/kayit/selam-01.wav", "zaman": "ses/zaman/selam-01.json", "klip": "selam", "sonra": "konusma"},
+    {"id": "bekle-01", "metin": "Bir saniye, hemen bakıyorum.", "ses": "ses/kayit/bekle-01.wav", "zaman": "ses/zaman/bekle-01.json", "klip": "dusunme", "sonra": "bekleme"},
+    {"id": "onay-01",  "metin": "Tamamdır, işlem başarıyla tamamlandı.", "ses": "ses/kayit/onay-01.wav", "zaman": "ses/zaman/onay-01.json", "klip": "onay", "sonra": "bekleme"},
+    {"id": "veda-01",  "metin": "Görüşmek üzere, iyi günler dilerim.", "ses": "ses/kayit/veda-01.wav", "zaman": "ses/zaman/veda-01.json", "klip": "veda", "sonra": "bekleme"}
+  ]
+}

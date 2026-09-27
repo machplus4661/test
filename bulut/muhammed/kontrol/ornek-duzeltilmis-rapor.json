@@ -1,0 +1,136 @@
+{
+  "dosya": "ornek-rigli-duzeltilmis.glb",
+  "boyut_mb": 0.02,
+  "agler": [
+    {
+      "mesh": 0,
+      "primitive": 0,
+      "ad": "ornek_govde",
+      "kose": 288,
+      "bbox_min": [
+        -0.25,
+        0.0,
+        -0.25
+      ],
+      "bbox_max": [
+        0.5299999713897705,
+        1.600000023841858,
+        0.25
+      ],
+      "uv": true,
+      "deri": true,
+      "morph_sayisi": 2,
+      "ucgen": 528,
+      "parca_sayisi": 2,
+      "parca_koseleri": [
+        192,
+        96
+      ],
+      "uv_min": [
+        0.08299999684095383,
+        0.0
+      ],
+      "uv_max": [
+        1.0,
+        1.0
+      ],
+      "uv_kapsama_orani": 0.054,
+      "morph_adlari": [
+        "MouthOpen",
+        "Smile"
+      ],
+      "morph_etkileri": [
+        {
+          "etkilenen_kose": 10,
+          "en_buyuk_kayma": 0.0707,
+          "merkez": [
+            0.0,
+            -0.05000000074505806,
+            0.05000000074505806
+          ]
+        },
+        {
+          "etkilenen_kose": 10,
+          "en_buyuk_kayma": 0.0361,
+          "merkez": [
+            0.029999999329447746,
+            0.019999999552965164,
+            0.0
+          ]
+        }
+      ]
+    }
+  ],
+  "iskelet": {
+    "kemik_sayisi": 3,
+    "kemikler": [
+      {
+        "ad": "Hips",
+        "ebeveyn": null,
+        "sinif": "govde",
+        "konum": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "ad": "Spine",
+        "ebeveyn": "Hips",
+        "sinif": "govde",
+        "konum": [
+          0.0,
+          0.8,
+          0.0
+        ]
+      },
+      {
+        "ad": "RightArm",
+        "ebeveyn": "Spine",
+        "sinif": "kol",
+        "konum": [
+          0.45,
+          0.9,
+          0.0
+        ]
+      }
+    ]
+  },
+  "agirliklar": [
+    {
+      "mesh": "ornek_govde",
+      "normalize_disi_kose": 0,
+      "sifir_agirlikli_kose": 0,
+      "ort_etki_sayisi": 1.67,
+      "kemik_basina_kose": {
+        "Hips": 155.8,
+        "Spine": 95.8,
+        "RightArm": 36.4
+      },
+      "kol_kemigi_uzak_kose": 0
+    }
+  ],
+  "animasyonlar": [
+    {
+      "ad": "selam",
+      "sure_sn": 1.0,
+      "kanal": 1,
+      "hedef_dugum": [
+        "RightArm"
+      ],
+      "morph_kanali": false
+    },
+    {
+      "ad": "bekleme",
+      "sure_sn": 1.0,
+      "kanal": 1,
+      "hedef_dugum": [
+        "RightArm"
+      ],
+      "morph_kanali": false
+    }
+  ],
+  "dokular": [],
+  "malzemeler": [],
+  "uyarilar": []
+}
