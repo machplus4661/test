@@ -1,8 +1,9 @@
-# Muhammed görüntüleyicisini başlatır. PowerShell'de bu dosyanın klasöründen:
+﻿# Muhammed görüntüleyicisini başlatır. PowerShell'de bu dosyanın klasöründen:
 #   powershell -ExecutionPolicy Bypass -File .\kur.ps1
 # İlk çalıştırmada bağımlılıkları kurar, her seferinde dalı günceller,
 # sunucuyu 8000 portunda açar ve tarayıcıyı görüntüleyiciye yönlendirir.
 $ErrorActionPreference = "Stop"
+[Console]::OutputEncoding = [System.Text.Encoding]::UTF8
 Set-Location $PSScriptRoot
 Write-Host "Klasör: $PSScriptRoot"
 

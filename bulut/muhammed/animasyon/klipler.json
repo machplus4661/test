@@ -1,31 +1,145 @@
 {
-  "_not": "15 klip. 'glb_adi' alanı GLB içindeki gerçek klip adıyla eşleştirilecek; teşhis raporu gelince doldurulur. Boşsa 'ad' ile aynı kabul edilir.",
+  "_not": "GLB'deki gerçek klipler (15): Gulumse, Idle, IdleBakin, IdleCeket, IdleSaat, Jump, KafaVurma, Sasir, Talk, Tikla, Uyari, Walking, Wave, Yaslan, Yes. 'glb_adi' bu adlara eşlendi; birebir karşılığı olmayanlar (hayir→KafaVurma, alkis→Jump, uzgun→Yaslan, veda→Wave) en yakın klibe bağlandı, gözle kontrol sonrası değişebilir. IdleCeket ve Walking tanımda yok, görüntüleyici yine de listeler.",
   "varsayilan_gecis_sn": 0.35,
   "bosta_klip": "bekleme",
   "klipler": [
-    {"ad": "bekleme",   "glb_adi": "", "dongu": true,  "sure_hedef_sn": 4.0, "aciklama": "Nefes, hafif ağırlık aktarma. Tüm kliplerin döndüğü taban."},
-    {"ad": "konusma",   "glb_adi": "", "dongu": true,  "sure_hedef_sn": 3.0, "aciklama": "Konuşurken küçük el ve baş hareketi. Dudak senkronu bunun üstüne biner."},
-    {"ad": "dinleme",   "glb_adi": "", "dongu": true,  "sure_hedef_sn": 3.0, "aciklama": "Baş hafif yana, göz teması, ara sıra onaylayıcı baş sallama."},
-    {"ad": "selam",     "glb_adi": "", "dongu": false, "sure_hedef_sn": 2.0, "aciklama": "Sağ el sallama. Kol-gövde gerilmesi en çok burada görülür."},
-    {"ad": "veda",      "glb_adi": "", "dongu": false, "sure_hedef_sn": 2.0, "aciklama": "El sallama + hafif öne eğilme."},
-    {"ad": "evet",      "glb_adi": "", "dongu": false, "sure_hedef_sn": 1.2, "aciklama": "Baş sallama, iki kez."},
-    {"ad": "hayir",     "glb_adi": "", "dongu": false, "sure_hedef_sn": 1.2, "aciklama": "Baş iki yana."},
-    {"ad": "dusunme",   "glb_adi": "", "dongu": true,  "sure_hedef_sn": 3.0, "aciklama": "El çenede, bakış yukarı."},
-    {"ad": "isaret_sol","glb_adi": "", "dongu": false, "sure_hedef_sn": 1.5, "aciklama": "Sol ele doğru ekran dışını gösterme."},
-    {"ad": "isaret_sag","glb_adi": "", "dongu": false, "sure_hedef_sn": 1.5, "aciklama": "Sağ ele doğru gösterme."},
-    {"ad": "gulme",     "glb_adi": "", "dongu": false, "sure_hedef_sn": 2.0, "aciklama": "Omuzlar titrer, Smile morph'u tavan."},
-    {"ad": "saskinlik", "glb_adi": "", "dongu": false, "sure_hedef_sn": 1.5, "aciklama": "Geri çekilme, MouthOpen kısa açılış."},
-    {"ad": "uzgun",     "glb_adi": "", "dongu": true,  "sure_hedef_sn": 3.0, "aciklama": "Omuzlar düşük, baş öne."},
-    {"ad": "alkis",     "glb_adi": "", "dongu": false, "sure_hedef_sn": 2.0, "aciklama": "İki el önde, üç vuruş."},
-    {"ad": "onay",      "glb_adi": "", "dongu": false, "sure_hedef_sn": 1.5, "aciklama": "Başparmak yukarı."}
+    {
+      "ad": "bekleme",
+      "glb_adi": "Idle",
+      "dongu": true,
+      "sure_hedef_sn": 4.0,
+      "aciklama": "Nefes, hafif ağırlık aktarma. Tüm kliplerin döndüğü taban."
+    },
+    {
+      "ad": "konusma",
+      "glb_adi": "Talk",
+      "dongu": true,
+      "sure_hedef_sn": 3.0,
+      "aciklama": "Konuşurken küçük el ve baş hareketi. Dudak senkronu bunun üstüne biner."
+    },
+    {
+      "ad": "dinleme",
+      "glb_adi": "IdleBakin",
+      "dongu": true,
+      "sure_hedef_sn": 3.0,
+      "aciklama": "Baş hafif yana, göz teması, ara sıra onaylayıcı baş sallama."
+    },
+    {
+      "ad": "selam",
+      "glb_adi": "Wave",
+      "dongu": false,
+      "sure_hedef_sn": 2.0,
+      "aciklama": "Sağ el sallama. Kol-gövde gerilmesi en çok burada görülür."
+    },
+    {
+      "ad": "veda",
+      "glb_adi": "Wave",
+      "dongu": false,
+      "sure_hedef_sn": 2.0,
+      "aciklama": "El sallama + hafif öne eğilme."
+    },
+    {
+      "ad": "evet",
+      "glb_adi": "Yes",
+      "dongu": false,
+      "sure_hedef_sn": 1.2,
+      "aciklama": "Baş sallama, iki kez."
+    },
+    {
+      "ad": "hayir",
+      "glb_adi": "KafaVurma",
+      "dongu": false,
+      "sure_hedef_sn": 1.2,
+      "aciklama": "Baş iki yana."
+    },
+    {
+      "ad": "dusunme",
+      "glb_adi": "IdleSaat",
+      "dongu": true,
+      "sure_hedef_sn": 3.0,
+      "aciklama": "El çenede, bakış yukarı."
+    },
+    {
+      "ad": "isaret_sol",
+      "glb_adi": "Tikla",
+      "dongu": false,
+      "sure_hedef_sn": 1.5,
+      "aciklama": "Sol ele doğru ekran dışını gösterme."
+    },
+    {
+      "ad": "isaret_sag",
+      "glb_adi": "Tikla",
+      "dongu": false,
+      "sure_hedef_sn": 1.5,
+      "aciklama": "Sağ ele doğru gösterme."
+    },
+    {
+      "ad": "gulme",
+      "glb_adi": "Gulumse",
+      "dongu": false,
+      "sure_hedef_sn": 2.0,
+      "aciklama": "Omuzlar titrer, Smile morph'u tavan."
+    },
+    {
+      "ad": "saskinlik",
+      "glb_adi": "Sasir",
+      "dongu": false,
+      "sure_hedef_sn": 1.5,
+      "aciklama": "Geri çekilme, MouthOpen kısa açılış."
+    },
+    {
+      "ad": "uzgun",
+      "glb_adi": "Yaslan",
+      "dongu": true,
+      "sure_hedef_sn": 3.0,
+      "aciklama": "Omuzlar düşük, baş öne."
+    },
+    {
+      "ad": "alkis",
+      "glb_adi": "Jump",
+      "dongu": false,
+      "sure_hedef_sn": 2.0,
+      "aciklama": "İki el önde, üç vuruş."
+    },
+    {
+      "ad": "onay",
+      "glb_adi": "Uyari",
+      "dongu": false,
+      "sure_hedef_sn": 1.5,
+      "aciklama": "Başparmak yukarı."
+    }
   ],
   "yuz_katmani": {
     "_not": "Vücut klibi çalarken üstüne binen morph animasyonu. Değerler 0-1.",
-    "gulme":     {"Smile": 1.0, "MouthOpen": 0.3},
-    "saskinlik": {"Smile": 0.0, "MouthOpen": 0.8},
-    "uzgun":     {"Smile": 0.0, "MouthOpen": 0.0},
-    "dinleme":   {"Smile": 0.25, "MouthOpen": 0.0},
-    "varsayilan": {"Smile": 0.15, "MouthOpen": 0.0}
+    "gulme": {
+      "Smile": 1.0,
+      "MouthOpen": 0.3
+    },
+    "saskinlik": {
+      "Smile": 0.0,
+      "MouthOpen": 0.8
+    },
+    "uzgun": {
+      "Smile": 0.0,
+      "MouthOpen": 0.0
+    },
+    "dinleme": {
+      "Smile": 0.25,
+      "MouthOpen": 0.0
+    },
+    "varsayilan": {
+      "Smile": 0.15,
+      "MouthOpen": 0.0
+    }
   },
-  "goz_kirpma": {"aralik_sn_min": 2.5, "aralik_sn_max": 6.0, "sure_sn": 0.15, "morph": ["BlinkL", "BlinkR"], "yoksa": "atla"}
+  "goz_kirpma": {
+    "aralik_sn_min": 2.5,
+    "aralik_sn_max": 6.0,
+    "sure_sn": 0.15,
+    "morph": [
+      "BlinkL",
+      "BlinkR"
+    ],
+    "yoksa": "atla"
+  }
 }

@@ -50,6 +50,7 @@ async function modelYukle(kaynak) {
   kok = gltf.scene; scene.add(kok);
   const kutu = new THREE.Box3().setFromObject(kok);
   const olcu = kutu.getSize(new THREE.Vector3()); boy = olcu.y || 1; kutu.getCenter(merkez);
+  izgara.position.y = kutu.min.y;  // zemin ayakların altında
   $('#dosya').textContent = `${kullanilan.split('/').pop()} · boy ${boy.toFixed(2)} · alt y ${kutu.min.y.toFixed(3)}`;
   aciAyarla('on');
 
